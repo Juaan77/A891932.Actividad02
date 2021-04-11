@@ -8,8 +8,8 @@ namespace A891932.Actividad02
 {
     class Producto
     {
-        internal int Id { get; private set; }
-        internal string Nombre { get; private set; }
+        internal int Id { get; }
+        internal string Nombre { get; }
         internal int Stock { get; private set; }
 
         internal Producto(int id, string nombre, int stock)

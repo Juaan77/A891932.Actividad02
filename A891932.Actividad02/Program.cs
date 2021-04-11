@@ -16,7 +16,7 @@ namespace A891932.Actividad02
 
             do
             {
-
+                
             } while (opcionElegida != "s");
 
             // Imprime el estado final del catalogo de productos al salir.
