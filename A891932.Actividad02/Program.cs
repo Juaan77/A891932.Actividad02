@@ -10,8 +10,24 @@ namespace A891932.Actividad02
     {
         static void Main(string[] args)
         {
-            // Repositorio Creado!!
-            // O eso espero...
+            // Se crea un catalogo cuyo identificador de productos va a ser su ID.
+            Dictionary<int, Producto> Catalogo = new Dictionary<int, Producto>();
+            string opcionElegida;
+
+            do
+            {
+
+            } while (opcionElegida != "s");
+
+            // Imprime el estado final del catalogo de productos al salir.
+            Console.WriteLine("\tCatalogo de Productos actual:");
+
+            foreach(KeyValuePair<int, Producto> producto in Catalogo)
+            {
+                Console.WriteLine($"- ID: {producto.Key} | '{producto.Value.Nombre}' \tStock: {producto.Value.Stock}");
+            }
+
+            Console.ReadKey();
         }
     }
 }
