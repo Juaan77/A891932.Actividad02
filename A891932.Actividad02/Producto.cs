@@ -24,16 +24,17 @@ namespace A891932.Actividad02
             Stock += cantidad;
         }
 
-        public void DisminuirStock(int cantidad)
+        public bool DisminuirStock(int cantidad)
         {
             if (Stock - cantidad < 0)
             {
-                Console.WriteLine("El stock no es suficiente para realizar la operacion.");
-                Console.ReadKey();
+                Console.WriteLine("El stock no es suficiente para realizar la operacion.");                
+                return false;
             }
             else
             {
                 Stock -= cantidad;
+                return true;
             }
         }
     }
