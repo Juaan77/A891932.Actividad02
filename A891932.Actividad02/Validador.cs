@@ -8,7 +8,7 @@ namespace A891932.Actividad02
 {
     class Validador
     {
-        public static int SolicitarCantidad(string texto)
+        public static int SolicitarNumero(string texto)
         {
             int numero;
             bool valido = false;
