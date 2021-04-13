@@ -62,9 +62,17 @@ namespace A891932.Actividad02
                         }
                         else
                         {                            
-                            Catalogo[idProducto].DisminuirStock(Validador.SolicitarNumero(solicitarCantidad));
-                            Console.WriteLine("Operacion Exitosa! Se ha realizado el pedido.\n");
-                            Console.ReadKey();
+                            if(Catalogo[idProducto].DisminuirStock(Validador.SolicitarNumero(solicitarCantidad)) == true)
+                            {
+                                Console.WriteLine("Operacion Exitosa! Se ha realizado el pedido.\n");
+                                Console.ReadKey();
+                            }
+                            else
+                            {
+                                Console.WriteLine("La operacion ha sido cancelada.\n");
+                                Console.ReadKey();
+                            }
+                            
                         }
                         break;
 
