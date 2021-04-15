@@ -23,23 +23,6 @@ namespace A891932.Actividad02
 
             // Catalogo de productos
             Dictionary<int, Producto> Catalogo = new Dictionary<int, Producto>();
-        
-            void ListarCatalogo()
-            {
-                Console.WriteLine("\tCatalogo de Productos actual:\n");
-
-                if (Catalogo.Count == 0)
-                {
-                    Console.WriteLine("El catalogo no tiene productos actualmente.\n");
-                }
-
-                foreach (KeyValuePair<int, Producto> producto in Catalogo)
-                {
-                    Console.WriteLine($"- ID: {producto.Key} | '{producto.Value.Nombre}' \tStock: {producto.Value.Stock}");                    
-                }
-
-                Console.ReadKey();
-            }
 
 
             // Funcion Principal
@@ -116,8 +99,26 @@ namespace A891932.Actividad02
 
             //  Imprime el estado final del catalogo de productos al salir.
             Console.Clear();
-            ListarCatalogo();            
-            Console.ReadKey();
+            ListarCatalogo();      
+            
+
+            //  Definicion de metodos
+            void ListarCatalogo()
+            {
+                Console.WriteLine("\tCatalogo de Productos actual:\n");
+
+                if (Catalogo.Count == 0)
+                {
+                    Console.WriteLine("El catalogo no tiene productos actualmente.\n");
+                }
+
+                foreach (KeyValuePair<int, Producto> producto in Catalogo)
+                {
+                    Console.WriteLine($"- ID: {producto.Key} | '{producto.Value.Nombre}' \tStock: {producto.Value.Stock}");
+                }
+
+                Console.ReadKey();
+            }
         }
     }
 }
