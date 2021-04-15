@@ -33,6 +33,7 @@ namespace A891932.Actividad02
 
                 switch (opcionElegida)
                 {
+                    // "Pedidos"
                     case "p":
                         
                         idProducto = Validador.SolicitarNumero(solicitarID);
@@ -59,7 +60,8 @@ namespace A891932.Actividad02
                         }
                         break;
 
-                    case "e":
+                    // "Entregas" 
+                    case "e":   
 
                         idProducto = Validador.SolicitarNumero(solicitarID);
 
@@ -78,6 +80,7 @@ namespace A891932.Actividad02
                         }
                         break;
 
+                    // "Ingreso de Productos"
                     case "i":
 
                         idProducto = Validador.SolicitarNumero(solicitarID);
@@ -89,6 +92,7 @@ namespace A891932.Actividad02
                         Console.ReadKey();
                         break;
 
+                    // "Mostrar Catalogo Actual"
                     case "l":
                         ListarCatalogo();
                         break;
